@@ -1,0 +1,34 @@
+name: Build StrixOS ISO
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm archiso git sudo
+
+      - name: Build StrixOS ISO
+        run: |
+          mkdir -p /tmp/strixos-work
+          mkdir -p /tmp/strixos-output
+          mkarchiso -v -w /tmp/strixos-work -o /tmp/strixos-output ./roxos-archiso
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: StrixOS-ISO
+          path: /tmp/strixos-output/*.iso
+          retention-days: 7
