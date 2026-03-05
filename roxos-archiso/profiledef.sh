@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="ROXOS"
-iso_label="ROXOS"
-iso_publisher="ROX.OS"
-iso_application="ROX.OS Gaming Linux"
+iso_name="STRIXOS"
+iso_label="STRIXOS"
+iso_publisher="StrixOS"
+iso_application="StrixOS Gaming Linux"
 iso_version="1.0"
 
 install_dir="arch"
