@@ -5,7 +5,6 @@ base
 bcachefs-tools
 bind
 bolt
-linux618-broadcom-wl
 btrfs-progs
 clonezilla
 cryptsetup
@@ -70,14 +69,13 @@ winetricks
 mangohud
 gamemode
 zram-generator
-calamares
 python
 python-jsonschema
 python-pyqt5
-qt5-base
 qt5-svg
-linux618
-linux618-headers
+qt5-svg
+linux
+linux-headers
 mesa
 xf86-video-amdgpu
 xf86-video-intel
