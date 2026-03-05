@@ -17,18 +17,19 @@ jobs:
         run: |
           docker run --privileged \
             -v ${{ github.workspace }}:/workspace \
+            -v ${{ github.workspace }}/output:/output \
             -w /workspace \
             archlinux:latest \
             bash -c "
               pacman -Syu --noconfirm &&
               pacman -S --noconfirm archiso git sudo &&
-              mkdir -p /tmp/strixos-work /tmp/strixos-output &&
-              mkarchiso -v -w /tmp/strixos-work -o /tmp/strixos-output ./roxos-archiso
+              mkdir -p /tmp/strixos-work /output &&
+              mkarchiso -v -w /tmp/strixos-work -o /output ./roxos-archiso
             "
 
       - name: Upload ISO
         uses: actions/upload-artifact@v4
         with:
           name: StrixOS-ISO
-          path: /tmp/strixos-output/*.iso
+          path: ${{ github.workspace }}/output/*.iso
           retention-days: 7
