@@ -1,0 +1,18 @@
+componentName: roxos
+welcomeStyleCalamares: false
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+sidebar: widget
+navigation: widget
+strings:
+    productName: ROX.OS
+    shortProductName: ROX.OS
+    version: 1.0
+    shortVersion: 1.0
+    versionedName: ROX.OS 1.0
+    shortVersionedName: ROX.OS 1.0
+    bootloaderEntryName: ROX.OS
+    productUrl: https://github.com/Rosdevteam/ROX.OS
+    supportUrl: https://github.com/Rosdevteam/ROX.OS/issues
+    releaseNotesUrl: https://github.com/Rosdevteam/ROX.OS

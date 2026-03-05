@@ -1,0 +1,34 @@
+name: Build ROX.OS ISO
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm archiso git sudo
+
+      - name: Build ROX.OS ISO
+        run: |
+          mkdir -p /tmp/roxos-work
+          mkdir -p /tmp/roxos-output
+          mkarchiso -v -w /tmp/roxos-work -o /tmp/roxos-output ./roxos-archiso
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROXOS-ISO
+          path: /tmp/roxos-output/*.iso
+          retention-days: 7

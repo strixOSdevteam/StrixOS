@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Install ROX.OS
+Exec=sudo calamares
+Icon=calamares
+Comment=Install ROX.OS to your system
+Terminal=false
+Categories=System;
