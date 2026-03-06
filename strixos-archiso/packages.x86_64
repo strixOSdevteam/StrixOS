@@ -40,7 +40,6 @@ winetricks
 mangohud
 gamemode
 zram-generator
-steam-native-runtime
 pipewire
 pipewire-alsa
 pipewire-pulse
@@ -51,12 +50,9 @@ xfce4
 lightdm
 lightdm-gtk-greeter
 gamemode
-lib32-gamemode
 cpupower
 irqbalance
 ananicy-cpp
-preload
-calamares
 python
 python-jsonschema
 qt5-base
@@ -67,4 +63,7 @@ noto-fonts
 xfce4-pulseaudio-plugin
 xfce4-terminal
 kvantum
-arc-gtk-theme
+steam
+ttf-dejavu
+materia-gtk-theme		
+
