@@ -1,4 +1,13 @@
-base
+xorg-server
+xorg-xinit
+xfce4
+xfce4-terminal
+thunar
+lightdm
+lightdm-gtk-greeter
+network-manager-applet
+papirus-icon-theme
+noto-fontsbase
 linux
 linux-headers
 linux-firmware
