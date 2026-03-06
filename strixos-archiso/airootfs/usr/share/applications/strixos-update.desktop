@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=StrixOS Update Center
+Comment=Check and install system updates
+Exec=xfce4-terminal -e strixos-update
+Icon=system-software-update
+Terminal=false
+Categories=System;

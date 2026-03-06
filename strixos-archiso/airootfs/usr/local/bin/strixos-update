@@ -1,0 +1,16 @@
+#!/bin/bash
+# StrixOS Update Center
+
+echo "╔════════════════════════════════╗"
+echo "║     StrixOS Update Center      ║"
+echo "╚════════════════════════════════╝"
+echo ""
+echo "Checking for updates..."
+echo ""
+
+sudo pacman -Syu --noconfirm
+
+echo ""
+echo "✅ StrixOS is up to date!"
+echo ""
+read -p "Press Enter to close..."

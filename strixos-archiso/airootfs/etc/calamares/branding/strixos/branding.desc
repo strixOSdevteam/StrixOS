@@ -1,0 +1,19 @@
+componentName: strixos
+welcomeStyleCalamares: false
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+sidebar: widget
+navigation: widget
+strings:
+    productName: StrixOS
+    shortProductName: StrixOS
+    version: "1.0"
+    shortVersion: "1.0"
+    versionedName: "StrixOS 1.0"
+    shortVersionedName: "StrixOS 1.0"
+    bootloaderEntryName: StrixOS
+    productUrl: https://github.com/strixOSdevteam/StrixOS
+    supportUrl: https://github.com/strixOSdevteam/StrixOS/issues
+    releaseNotesUrl: https://github.com/strixOSdevteam/StrixOS
+
