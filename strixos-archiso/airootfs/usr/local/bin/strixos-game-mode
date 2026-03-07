@@ -1,0 +1,26 @@
+#!/bin/bash
+# StrixOS Game Mode - Maximum Performance
+
+echo "🎮 StrixOS Game Mode Activated!"
+
+# Set CPU to performance
+for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
+    echo performance | sudo tee $cpu
+done
+
+# Disable CPU boost throttling
+echo 1 | sudo tee /sys/devices/system/cpu/cpufreq/boost 2>/dev/null
+
+# Clear RAM cache
+sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+
+# Set GPU performance mode AMD
+echo high | sudo tee /sys/class/drm/card0/device/power_dpm_force_performance_level 2>/dev/null
+
+# Set GPU performance mode NVIDIA
+sudo nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=1" 2>/dev/null
+
+# Enable gamemode
+gamemoded -r 2>/dev/null
+
+echo "✅ Game Mode Ready! Have fun! 🎮"

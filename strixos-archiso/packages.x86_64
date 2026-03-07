@@ -75,4 +75,7 @@ kvantum
 steam
 ttf-dejavu
 adapta-gtk-theme
-
+systemd
+systemd-sysvcompat
+imagemagick
+papirus-icon-theme

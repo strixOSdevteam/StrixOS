@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=StrixOS Game Mode
+Comment=Activate maximum gaming performance
+Exec=xfce4-terminal -e strixos-game-mode
+Icon=applications-games
+Terminal=false
+Categories=Game;System;
