@@ -80,3 +80,6 @@ systemd-sysvcompat
 imagemagick
 papirus-icon-theme
 syslinux
+xorg-xhost
+xorg-xauth
+dbus-x11
