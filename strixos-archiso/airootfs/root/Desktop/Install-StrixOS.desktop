@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Install StrixOS
+Comment=Install StrixOS to your computer
+Exec=calamares
+Icon=system-software-install
+Terminal=false
+Categories=System;
