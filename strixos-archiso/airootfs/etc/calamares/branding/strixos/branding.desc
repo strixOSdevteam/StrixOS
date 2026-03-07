@@ -16,13 +16,10 @@ strings:
     productUrl: https://github.com/strixOSdevteam/StrixOS
     supportUrl: https://github.com/strixOSdevteam/StrixOS/issues
     releaseNotesUrl: https://github.com/strixOSdevteam/StrixOS
-images:
-    productLogo: "strixos-logo.png"
-    productIcon: "strixos-logo.png"
-    productWelcome: "welcome.png"
-slideshow: "show.qml"
 style:
     sidebarBackground: "#1a1a1a"
-    sidebarText: "#FFFFFF"
+    sidebarText: "#ffffff"
     sidebarTextSelect: "#cc0000"
     sidebarTextHighlight: "#cc0000"
+    buttonBackground: "#cc0000"
+    buttonText: "#ffffff"

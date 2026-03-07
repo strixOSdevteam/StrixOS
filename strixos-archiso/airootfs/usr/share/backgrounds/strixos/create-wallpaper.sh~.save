@@ -1,0 +1,9 @@
+#!/bin/bash
+convert -size 1920x1080 \
+  gradient:#0a0a0a-#1a0000 \
+  -fill '#cc0000' \
+  -font DejaVu-Sans-Bold \
+  -pointsize 80 \
+  -gravity center \
+  -annotate 0 'StrixOS' \
+  /usr/share/backgrounds/strixos/wallpape
