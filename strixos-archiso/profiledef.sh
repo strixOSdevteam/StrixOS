@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
-
 iso_name="STRIXOS"
 iso_label="STRIXOS"
 iso_publisher="StrixOS"
 iso_application="StrixOS Gaming Linux"
 iso_version="1.0"
-
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('uefi.systemd-boot')
@@ -22,4 +20,6 @@ file_permissions=(
   ["/usr/local/bin/choose-mirror"]="0:0:755"
   ["/usr/local/bin/Installation_guide"]="0:0:755"
   ["/usr/local/bin/livecd-sound"]="0:0:755"
+  ["/usr/local/bin/strixos-update"]="0:0:755"
+  ["/usr/local/bin/strixos-game-mode"]="0:0:755"
 )
