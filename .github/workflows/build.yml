@@ -1,3 +1,4 @@
+cat > ~/StrixOS/.github/workflows/build.yml << 'EOF'
 name: Build StrixOS ISO
 
 on:
@@ -15,7 +16,7 @@ jobs:
 
       - name: Build StrixOS ISO
         run: |
-          docker run --privileged -v ${{ github.workspace }}:/workspace -v ${{ github.workspace }}/output:/output -w /workspace archlinux:latest bash -c 'pacman -Syu --noconfirm && pacman -S --noconfirm archiso git sudo base-devel && useradd -m builder && echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && mkdir -p /tmp/strixos-work /output && mkdir -p /workspace/strixos-archiso/airootfs/etc/pacman.d && cp /etc/pacman.conf /workspace/strixos-archiso/airootfs/etc/pacman.conf && cp /etc/pacman.d/mirrorlist /workspace/strixos-archiso/airootfs/etc/pacman.d/mirrorlist && mkarchiso -v -w /tmp/strixos-work -o /output ./strixos-archiso'
+          docker run --privileged -v ${{ github.workspace }}:/workspace -v ${{ github.workspace }}/output:/output -w /workspace archlinux:latest bash -c 'pacman -Syu --noconfirm && pacman -S --noconfirm archiso git sudo base-devel && useradd -m builder && echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && mkdir -p /tmp/strixos-work /output && mkdir -p /workspace/strixos-archiso/airootfs/etc/pacman.d && cp /etc/pacman.conf /workspace/strixos-archiso/airootfs/etc/pacman.conf && cp /etc/pacman.d/mirrorlist /workspace/strixos-archiso/airootfs/etc/pacman.d/mirrorlist && echo "root::0::::::" > /workspace/strixos-archiso/airootfs/etc/shadow && mkarchiso -v -w /tmp/strixos-work -o /output ./strixos-archiso'
 
       - name: Upload ISO
         uses: actions/upload-artifact@v4
@@ -23,3 +24,5 @@ jobs:
           name: StrixOS-ISO
           path: ${{ github.workspace }}/output/*.iso
           retention-days: 7
+EOF
+
