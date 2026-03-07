@@ -1,7 +1,7 @@
 componentName: strixos
 welcomeStyleCalamares: false
 windowExpanding: normal
-windowSize: 800px,520px
+windowSize: 900px,600px
 windowPlacement: center
 sidebar: widget
 navigation: widget
@@ -16,4 +16,13 @@ strings:
     productUrl: https://github.com/strixOSdevteam/StrixOS
     supportUrl: https://github.com/strixOSdevteam/StrixOS/issues
     releaseNotesUrl: https://github.com/strixOSdevteam/StrixOS
-
+images:
+    productLogo: "strixos-logo.png"
+    productIcon: "strixos-logo.png"
+    productWelcome: "welcome.png"
+slideshow: "show.qml"
+style:
+    sidebarBackground: "#1a1a1a"
+    sidebarText: "#FFFFFF"
+    sidebarTextSelect: "#cc0000"
+    sidebarTextHighlight: "#cc0000"
