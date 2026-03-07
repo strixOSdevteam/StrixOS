@@ -80,6 +80,3 @@ systemd-sysvcompat
 imagemagick
 papirus-icon-theme
 syslinux
-xf86-video-vmware
-xf86-input-mouse
-xf86-input-keyboard
