@@ -15,18 +15,11 @@ jobs:
 
       - name: Build StrixOS ISO
         run: |
-          docker run --privileged \
-            -v ${{ github.workspace }}:/workspace \
-            -v ${{ github.workspace }}/output:/output \
-            -w /workspace \
-            archlinux:latest \
-            bash -c "
-              pacman -Syu --noconfirm &&
-              pacman -S --noconfirm archiso git sudo base-devel &&
-              useradd -m builder &&
-              echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers &&
-              su builder -c 'git clone https://aur.archlinux.org/calamares.git /tmp/calamares && cd /tmp/calamares && makepkg -si --noconfirm' &&
-              mkdir -p /tmp/strixos-work /output &&
-              mkdir -p /workspace/strixos-archiso/airootfs/etc/pacman.d &&
-              cp /etc/pacman.conf /workspace/strixos-archiso/airootfs/etc/pacman.conf &&
-              cp /etc/pacman.d/mirrorlist /workspace/strixos-archiso/airootfs/etc/pacman.d/mirrorlist &&
+          docker run --privileged -v ${{ github.workspace }}:/workspace -v ${{ github.workspace }}/output:/output -w /workspace archlinux:latest bash -c 'pacman -Syu --noconfirm && pacman -S --noconfirm archiso git sudo base-devel && useradd -m builder && echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && mkdir -p /tmp/strixos-work /output && mkdir -p /workspace/strixos-archiso/airootfs/etc/pacman.d && cp /etc/pacman.conf /workspace/strixos-archiso/airootfs/etc/pacman.conf && cp /etc/pacman.d/mirrorlist /workspace/strixos-archiso/airootfs/etc/pacman.d/mirrorlist && mkarchiso -v -w /tmp/strixos-work -o /output ./strixos-archiso'
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: StrixOS-ISO
+          path: ${{ github.workspace }}/output/*.iso
+          retention-days: 7
