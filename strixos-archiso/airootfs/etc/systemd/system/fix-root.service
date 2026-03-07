@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix root account
+Before=getty.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/passwd -d root
+ExecStart=/usr/bin/usermod -s /bin/bash root
+
+[Install]
+WantedBy=multi-user.target
