@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Install StrixOS
+Exec=sudo calamares
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
