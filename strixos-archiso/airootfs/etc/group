@@ -1,3 +1,4 @@
 liveuser:x:1000:
 wheel:x:10:liveuser
 autologin:x:999:liveuser
+autologin:x:999:liveuser
