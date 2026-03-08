@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Install StrixOS
+Exec=sudo calamares
+Icon=system-software-install
+Terminal=false
