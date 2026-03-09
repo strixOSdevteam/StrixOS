@@ -1,0 +1,10 @@
+steam
+lutris
+wine
+winetricks
+mangohud
+gamemode
+lib32-gamemode
+discord
+heroic-games-launcher
+proton-ge-custom-bin

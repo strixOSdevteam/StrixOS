@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Updating StrixOS..."
+sudo pacman -Syu --noconfirm
+flatpak update -y
+echo "StrixOS is up to date!"
