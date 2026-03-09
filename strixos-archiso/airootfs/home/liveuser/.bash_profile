@@ -1,3 +1,1 @@
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = "1" ]; then
-  exec startx
-fi
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx -- -nolisten tcp
